@@ -21,12 +21,19 @@ class MainActivity : AppCompatActivity() {
         val buttonChangeTextColor =
             findViewById<Button>(R.id.buttonChangeTextColor)
 
+        val buttonChangeBackground =
+            findViewById<Button>(R.id.buttonChangeBackground)
+
         buttonChangeText.setOnClickListener {
             textView.text = getString(R.string.button_clicked)
         }
 
         buttonChangeTextColor.setOnClickListener {
             textView.setTextColor(Color.RED)
+        }
+
+        buttonChangeBackground.setOnClickListener {
+            window.decorView.setBackgroundColor(Color.LTGRAY)
         }
     }
 }
